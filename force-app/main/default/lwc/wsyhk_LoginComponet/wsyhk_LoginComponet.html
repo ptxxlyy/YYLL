@@ -1,0 +1,15 @@
+<template>
+    <div if:false={loginFlag}>
+        <div>
+            <lightning-input label="名前：" placeholder="名前を入力してください："></lightning-input>
+            <lightning-input label="パスワード：" placeholder="パスワードを入力してください："></lightning-input>
+        </div>
+        <div>
+            <lightning-button variant="brand" label="登録" title="Login" onclick={wsyhk_Login} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </div>
+    <div if:true={loginFlag}>
+        {userName} 登録成功！！！
+        <lightning-button variant="brand" label="登出" title="Logout" onclick={wsyhk_Logout} class="slds-m-left_x-small"></lightning-button>
+    </div>
+</template>
